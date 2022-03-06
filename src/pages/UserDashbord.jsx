@@ -5,8 +5,6 @@ import { Doughnut } from "react-chartjs-2";
 import {Chart, ArcElement} from 'chart.js'
 Chart.register(ArcElement);
 
-
-
 const data = {
   labels: ["Critical case", "Urgent case", "Errors", "Reviewed", "Success"],
   datasets: [

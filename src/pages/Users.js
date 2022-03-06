@@ -10,14 +10,12 @@ class Users extends React.Component {
     this.state = {
       showModal: false
     };
-    
-    
+       
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
-
-  
+ 
   handleOpenModal () {
     this.setState({ showModal: true });
   }
@@ -36,8 +34,6 @@ class Users extends React.Component {
            contentLabel="Minimal Modal Example"
         >
           <button className="btn btn1 btn-primary" onClick={this.handleCloseModal}>Close Modal</button>
-
-
        <NewUser aaa={this.props.btnname} name={this.props.name} email={this.props.email} body={this.props.body} id={this.props.id} />
          
         </ReactModal>
@@ -46,6 +42,5 @@ class Users extends React.Component {
   }
 }
 
-const props = {};
 
 export default Users;

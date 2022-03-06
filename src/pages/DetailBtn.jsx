@@ -7,10 +7,8 @@ class NewUser extends React.Component {
   constructor (props) {
     super();
     this.state = {
-     
       name: "", email: "", body: "", id:"", user: [] 
     };
-    
   }
 
   onInputChange = e => {
@@ -67,21 +65,7 @@ class NewUser extends React.Component {
       .then(data => this.printFields(data))
       .catch(error => console.log("Error", error))
      .then(response => console.log("‘Success", response));
-     //.then(user => this.setState({user}));
   };
-  printFields = user => {
-    //console.log(result);
-    //const { name, email, password, mobile } = result;
-    this.setState({ user });
-    console.log(this.state.user);
-  };
-
-
-
-
-
-
-
 
 
   
@@ -123,13 +107,9 @@ class NewUser extends React.Component {
     <label>Body text</label>
     <input type="text" className="form-control" id="exampleInputPassword1"  name="body" defaultValue={this.props.body} onChange={this.onInputChange} />
   </div>
-  
-  
+   
   <button type="submit" className="btn btn-primary form-group">Submit</button>
 </form>
-
-
-
 ) :
 ""
 }
@@ -140,6 +120,5 @@ class NewUser extends React.Component {
   }
 }
 
-const props = {};
 
 export default NewUser;
